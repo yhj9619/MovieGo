@@ -39,16 +39,12 @@
             #my_info> span{
             	display: flex;
             	flex-direction: column;
-                background: #434343;
-                padding:10px;
-                border-radius: 10px;
+                padding:20px;
                 margin: 5px;
             }
             #my_info > table{
             	color: #000000;
-            }
-            #my_info > table > tr > th {
-            	width:100px;
+            	padding:20px;
             }
             
             #my_btn{
@@ -100,9 +96,9 @@
                     <span><img src="media/profile.png" height="140"width="140" alt="프로필사진"/></span>
                     <table>
                     	<col width="40%"><col width="60%">
-                    	<tr><th>닉네임</th><td><%=m.getNickname() %></td></tr>
-                    	<tr><th>등급</th><td><%=m.getGrade() %></td></tr>
-                    	<tr><th>포인트</th><td><%=m.getPoint() %></td></tr>
+                    	<tr><th style="width:100px;">닉네임</th><td style="width:100px;"><%=m.getNickname() %></td></tr>
+                    	<tr><th style="width:100px;">등급</th><td style="width:100px;"><%=m.getGrade() %></td></tr>
+                    	<tr><th style="width:100px;">포인트</th><td style="width:100px;"><%=m.getPoint() %></td></tr>
                     </table>
                 </div>
                 <div id="my_btn">

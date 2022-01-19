@@ -1,5 +1,9 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
+    pageEncoding="UTF-8"
+    import="java.util.*"
+    import="project_3rd_package.Dao.*"   
+    import="project_3rd_package.vo.*"   
+    %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -98,11 +102,15 @@
 
     </head>
     <body>
+    	<%
+		// 저장된 session 값가져오기..
+		Member m = (Member)session.getAttribute("mem");
+		%>
         <div class="tab">
             <table><tr><th>프로필<br>이미지</th><td style="text-align: center;"><img src="media/profile.png" height="140"width="140" alt="프로필사진"/></td></tr>
                 <tr>
                     <th>닉네임</th>
-                    <td><input type="text" value="닉네임"/><button>중복확인</button></td>
+                    <td><input type="text" value="<%=m.getNickname() %>"/><button>중복확인</button></td>
                 </tr>
                 <tr>
                     <th>전화번호</th>
@@ -122,7 +130,7 @@
                 </tr>
                 <tr>
                     <th>한 줄 소개<br><span></span></th>
-                    <td><textarea>안녕하세요 저는 영화를 좋아합니다</textarea></td>
+                    <td><textarea><%=m.getIntro() %></textarea></td>
                 </tr>
             </table>
             <div class="btn">

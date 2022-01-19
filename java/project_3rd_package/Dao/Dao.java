@@ -273,7 +273,7 @@ public class Dao {
       // TODO Auto-generated method stub
 
       Dao d1 = new Dao();
-      d1.insertMember(new Member("higirl","6666","김민지","밍지","일반 사용자",0,"ㅎㅇㅎㅇ"));
+      d1.insertMember(new Member("higirl","6666","김민지","밍지","일반사용자",0,"ㅎㅇㅎㅇ"));
 
    }
 

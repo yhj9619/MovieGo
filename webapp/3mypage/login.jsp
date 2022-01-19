@@ -18,10 +18,6 @@
 	    <%
 		String id = request.getParameter("id");
 		String pass = request.getParameter("pass");
-		// id가 null 아닐 때, 초기화면이 아니고, 아이디를 입력해서 로그인한 화면일 때,
-		// DB 처리..
-		System.out.println("id:"+id);
-		// DB를 통해 login이 있는 상황인지 여부를 확인하기 위해 boolean 선언.
 		String status = "init";
 		if(id!=null){
 			status = "login";
