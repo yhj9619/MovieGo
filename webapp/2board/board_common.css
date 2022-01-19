@@ -1,0 +1,191 @@
+@charset "UTF-8";
+.wrapper {
+  width: 1140px;
+  height: 100px;
+  margin: 0 auto;
+  display: flex;
+}
+
+.wrapper>section {
+  width: 870px;
+  height: 200px;
+}
+
+.wrapper>section>h2 {
+  height: 40px;
+  text-align: center;
+  background: linear-gradient(60deg, #000, #434343);
+  margin: 0;
+  padding-top: 10px;
+  color: white;
+  font-weight: 500;
+  border-radius: 5px;
+}
+
+.wrapper>section>.hotBoard {
+  margin-bottom: 20px;
+  height : 268px;
+  border: 1px solid #c3c3c3;
+  border-radius : 5px;
+}
+
+.wrapper>section>.hotBoard>h3 {
+  margin-left: 20px;
+}
+
+.wrapper th {
+  padding: 7px 0;
+  border-bottom: 1px solid #c3c3c3;
+}
+
+.wrapper td {
+  font-size: 14px;
+  text-align: center;
+  padding: 5px 0;
+  border-bottom: 1px solid #c3c3c3;
+}
+
+.wrapper td a {
+  text-decoration: none;
+  color: black;
+}
+
+.wrapper td:nth-child(2):hover {
+  font-weight: bold;
+}
+
+.wrapper td span {
+	color: #f0872b;
+	margin-right : 10px;
+}
+
+.wrapper>section>.mainBoard {
+  /* border: 1px solid #666; */
+}
+
+/* board_search 검색 화면 글자 강조 */
+.wrapper>section>h3 {
+  font-weight: 500;
+}
+
+.wrapper>section>h3>.searchWord {
+  font-weight: 600;
+  font-size: 30px;
+  color: #f0872b;
+}
+
+.wrapper>section>h3>.searchNum {
+  font-weight: 600;
+}
+
+/* aside 영역 */
+aside {
+  width: 250px;
+  height: 510px;
+  margin-left: 20px;
+  border: 1px solid #999;
+  border-radius: 5px;
+}
+
+aside h3 {
+  font-size: 17px;
+  font-weight: 500;
+  margin: 0;
+  padding: 5px;
+  background: linear-gradient(60deg, #000, #434343);
+  color: white;
+}
+
+aside a {
+  font-size: 14px;
+  display: block;
+  text-decoration: none;
+  color: black;
+  margin: 10px 10px;
+}
+
+aside a:hover {
+  font-weight: bold;
+  color: #f0872b;
+}
+
+aside span {
+  margin-left: 30px;
+}
+
+
+/* 숫자 페이징 */
+.numbering {
+  text-align: center;
+  margin: 15px 0;
+  margin-left: 120px;
+}
+
+.numbering>a:nth-child(2) {
+  font-weight: bold;
+}
+
+.numbering>a:hover {
+  font-weight: bold;
+  color: #f0872b;
+}
+
+.numbering>a {
+  text-decoration: none;
+  color: black;
+  margin: 8px;
+}
+
+/* 글쓰기 버튼 */
+.numbering>a>button {
+  width: 100px;
+  height: 40px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(60deg, #000, #434343);
+  color: white;
+  float: right;
+  cursor: pointer;
+}
+
+.numbering>a>button:hover {
+  background-color: #333;
+  color: #f0872b;
+}
+
+/* 검색 영역 */
+.search {
+  text-align: center;
+  margin: 30px 0;
+}
+
+.search select {
+  height: 30px;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+}
+
+.search input[type="text"] {
+  height: 30px;
+  width: 300px;
+  border-radius: 0;
+  padding: 0 8px;
+  border: 1px solid #666;
+}
+
+.search input[type="submit"] {
+  height: 30px;
+  width: 150px;
+  border-radius: 5px;
+  border: 1px solid #666;
+  padding: 0;
+  cursor: pointer;
+  background-color: #222;
+  color: white;
+}
+
+.search input[type="submit"]:hover {
+  color: #f0872b;
+}

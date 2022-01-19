@@ -1,0 +1,17 @@
+@charset "UTF-8";
+.common_div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+tbody{
+	background:white;
+}
+th{
+    border-radius: 5px;
+    color:white;
+    background: #000000;
+}
+th,td{
+    text-align:center;
+}

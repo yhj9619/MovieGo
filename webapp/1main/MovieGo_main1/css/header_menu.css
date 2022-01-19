@@ -1,0 +1,200 @@
+@charset "UTF-8";
+
+/* 범용 선택자 , 문서전체에 적용 */
+*{ 
+	margin: 0 auto; /* 중앙정렬  */ 
+	padding: 0; /* 기본적으로 들어가 있는 패딩 제거 */
+	list-style: none; /* list 앞에 붙어있는 기호 제거  */
+	color: #000000; /* 글자 색상 검은색  */
+	font-size: 20px; /* 글자 크기 20 픽셀   */
+}
+
+body{
+	width: 2000px; /* 바디 태그 너비 1400픽셀 지정 */
+}
+
+a{
+	display: block; /* 박스 요소를 블록으로 지정. 한행을 전체 사용 */
+	text-decoration: none; /* 밑줄 제거 */
+}
+
+nav{
+	width: 2000px; /* 너비 1000픽셀 지정 */
+}
+
+main{
+	width: 1000px; /* 너비 1000픽셀 지정 */	
+}
+
+/* 상단 메뉴 빠 관련 */
+
+.menu{
+	width:2000px;
+	height:50px;
+}
+
+.menu>li{
+	float: left; /* 왼쪽으로 정렬 */
+	width: 500px; /* 너비 250픽셀  */
+	height: 40px; /* 높이 40픽셀  */
+	background-color: rgb(243, 159, 46); /* 배경색 지정 */
+}
+
+.menu>li>a{
+	line-height: 40px; /* 글자높이 40픽셀  */
+	text-align: center; /* 글자 중앙정렬  */
+	font-weight: bold; /* 글자 굵게 지정  */
+	color: #ffffff;	/* 글자 색상 흰색  */
+}
+.menu>li:hover>a{
+	background-color: rgb(235, 117, 46); 
+	/* 마우스가 오버되면 배경색을 바꾸고 li에 올리면 지정 효과 발생  */ 
+}
+
+.submenu>li{
+	width: 500px; /* 너비 250픽설 지정 */
+	height: 40px; /* 높이 40픽셀 지정 */
+	background-color: rgb(244, 191, 111); /* 배경 색상 지정 */
+	z-index : 10;
+}
+.submenu>li>a{
+	line-height: 40px; /* 글자 높이를 40픽셀 지정, 가운데 정렬 */
+	font-size: 18px; /* 글자 크기 18픽셀 */
+	text-align: center; /* 글자 너비 가운데 위치 */
+	color: rgb(255, 255, 255); /* 색지정 */
+}
+.submenu>li:hover>a{
+	text-decoration: underline;
+	font-weight: bold;
+	 /* 마우스를 올리면 적용한 효과 나타남 : 글자 아래에 밑줄 생성  */
+}
+
+.submenu{
+	display: none; /* 마지막에 적기 */
+	z-index:2;
+	/* 클래스 선택자 submenu와 그 하위 태그가 전체 안보이게 함  */
+}
+/* ------------------------------------------------------ */
+
+/* 상단 헤더 부분 */
+
+#menu1{
+	width:2000px;
+	height:130px;
+	border-left-style: double;
+ 	border-left-width: 5px;
+ 	border-left-color: #f0872b;
+ 	border-right-style: double;
+ 	border-right-width: 5px;
+ 	border-right-color: #f0872b;
+}
+
+#menu1 ul{
+	height:135px;
+}
+
+#menu1 ul li{
+	float: left;
+	width: 25%;
+	height: 50%;
+	line-height:50px;
+	text-align: center;
+	background: white;
+	font-weight: bold;
+}
+
+#menu1 ul li a{
+	display: block;	
+}
+
+#menu1 ul li a:hover{
+	background: white;
+	border: solid red;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+/* 게시판 관련 */
+
+.sectionMake {
+    background-color: white;
+    padding: 0px;
+    color: black;
+    /*float: left;*/
+    /*display: flex;*/
+    flex-direction: row-reverse;
+    width: 2000px;
+    height: 600px;
+    border-left-style: double;
+ 	border-left-width: 5px;
+ 	border-left-color: #f0872b;
+ 	border-right-style: double;
+ 	border-right-width: 5px;
+ 	border-right-color: #f0872b;
+ 	border-bottom-width: 5px;
+ 	border-bottom-color: #f0872b;
+}
+.sectionMake > div {
+	background-color: white;
+	margin:0 auto;
+	width: 480px;
+	height: 550px;
+	padding: 10px;
+	z-index:1;
+	display: block;
+	float:left;
+}
+
+
+ 
+.sectionMake >li >a{
+	background: white;
+	
+	
+	
+}
+            
+.sectionMake ul li{
+	height:50px;
+}       
+
+.subSection>li:hover>a{
+	text-decoration: underline;
+	font-weight: bold;
+	 /* 마우스를 올리면 적용한 효과 나타남 : 글자 아래에 밑줄 생성  */
+}     
+
+
+
+/* 사진 관련 css */
+.sectionImg {
+    background-color:white;
+    padding: 0px;
+    color: black;
+    display: flex;
+    flex-direction: row-reverse;
+    width: 1000px;
+    height: 100px;
+}
+
+/* 중앙사진관련 */
+.slider > div{
+	z-index:1;
+}
+
+.slider >img{
+	margin:0 auto;
+	position:static;
+} 
+.slider >div>table{
+	margin: auto;
+}
+
+
+
+
+
+
+
+
+

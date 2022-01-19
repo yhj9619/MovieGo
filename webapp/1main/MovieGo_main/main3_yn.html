@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+	*{margin:0;padding:0;box-sizing:border-box;}
+	
+	ul, li{list-style:none;}
+	
+	[name="slide"]{display:none;}
+	
+	.slidebox{max-width:1000px;width:100%;margin:0 auto;}
+	
+	.slidebox img {max-width:100%;}
+	
+	.slidebox .slidelist{
+		white-space:nowrap;
+		font-size:0;
+		overflow:hidden;
+	}
+	
+	.slidebox .slideitem{
+		position:relative;
+		display:inline-block;
+		vertical-align:middle;
+		width:100%;
+		transition:all .35s;
+	}
+	
+	.slidebox .slideitem lable{
+		position:absolute;
+		z-index:1;
+		top:50%;
+		transform:translateY(-50%);
+		padding:20px;
+		border-radius:50%;
+		cursor:pointer;		
+	}
+	label.left{
+		left:20px;
+		background-color:#5F5F5F;
+		background-image:url('../MovieGo_image/reft_pointer.png');
+		background-position:center center;
+		background-size:50%;
+		background-repeat:no-repeat;		
+	}
+	
+	label.right{
+		left:20px;
+		background-color:#5F5F5F;
+		background-image:url('../MovieGo_image/reft_pointer.png');
+		background-position:center center;
+		background-size:50%;
+		background-repeat:no-repeat;
+	}
+	
+	
+</style>
+</head>
+<body>
+	<div class="slidebox">
+ 	  <input type="radio" name="slide" id="silde01" checked>
+ 	  <input type="radio" name="slide" id="silde02">
+ 	  <input type="radio" name="slide" id="silde03">
+ 	  <input type="radio" name="slide" id="silde04">
+  	 	<ul class="slidelist">
+    		<li class="slideitem">
+    		  <div>
+    			<label for ="slide04" class="left"></label>
+    			<label for ="slide02" class="right"></label>
+    			<a><img src="/yn_Project/MovieGo_image/nowayhome.png"alt="슬라이드 이미지1" width="300"/></a>	
+    		  </div>
+    		</li> 
+    		<li class="slideitem">
+    		  <div>
+    			<label for ="slide01" class="left"></label>    			
+    			<label for ="slide03" class="right"></label>    			
+    			<a><img src="/yn_Project/MovieGo_image/nowayhome.png"alt="슬라이드 이미지1" width="300"/></a>	
+    		  </div>
+    		</li>
+    		<li class="slideitem">
+    		  <div>
+    			<label for ="slide02" class="left"></label>    			
+    			<label for ="slide04" class="right"></label>    			
+    			<a><img src="/yn_Project/MovieGo_image/nowayhome.png"alt="슬라이드 이미지1" width="300"/></a>	
+    		  </div>
+    		</li>
+    		<li class="slideitem">
+    		  <div>
+    			<label for ="slide03" class="left"></label>    			
+    			<label for ="slide01" class="right"></label>    			
+    			<a><img src="/yn_Project/MovieGo_image/nowayhome.png"alt="슬라이드 이미지1" width="300"/></a>	
+    		  </div>
+    		</li>
+    	</ul>	
+    </div>
+ 	
+</body>
+</html>

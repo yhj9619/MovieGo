@@ -1,0 +1,64 @@
+/* 컨텐츠 영역 */
+.wrapper {
+  width: 1140px;
+  /* margin 0 auto : 컨텐츠 중앙정렬 설정, 컨텐츠의 가로 너비가 반드시 필요함 */
+  margin: 0 auto;
+  display: flex;
+}
+
+.wrapper>section {
+  width: 870px;
+}
+top {
+    width: 400px;
+    height: 30px;
+    margin-left: 1px;
+    border: 1px solid #666;
+  }
+  top h2 {
+    font-size: 17px;
+    font-weight: 500;
+    margin: 0;
+    padding: 5px;
+    width: 951px; 
+    background-color: #666;
+    color: white;
+  }
+button {
+    width: 80px;
+    height: 40px;
+    margin-right: 500px;
+    border: 1px solid #666;
+  }
+
+  
+/* aside 영역 */
+aside {
+  width: 250px;
+  height: 690px;
+  margin-left: 20px;
+  border: 1px solid #666;
+}
+
+aside h3 {
+    font-size: 17px;
+    font-weight: 500;
+    margin: 0;
+    padding: 5px; 
+    background-color: #666;
+    color: white;
+  }
+
+aside a {
+  font-size: 14px;
+  display: block;
+  text-decoration: none;
+  color: black;
+  margin: 10px 10px;
+}
+aside a:hover {
+  font-weight: bold;
+}
+aside span {
+  margin-left: 30px;
+}
