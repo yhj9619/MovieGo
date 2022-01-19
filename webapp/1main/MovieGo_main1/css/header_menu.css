@@ -81,31 +81,36 @@ main{
 #menu1{
 	width:2000px;
 	height:130px;
+	color: white;
 }
 
 #menu1 ul{
 	height:135px;
+	color: white;
 }
 
 #menu1 ul li{
 	float: left;
 	width: 25%;
-	height: 50%;
+	height: 100%;
 	line-height:50px;
 	text-align: center;
-	background: white;
+	background: black;
 	font-weight: bold;
+	color: white;
 }
 
 #menu1 ul li a{
 	display: block;	
+	color: white;
 }
 
 #menu1 ul li a:hover{
-	background: white;
+	background: black;
 	border: solid red;
 	font-size: 20px;
 	font-weight: bold;
+	color: white;
 }
 
 /* 게시판 관련 */

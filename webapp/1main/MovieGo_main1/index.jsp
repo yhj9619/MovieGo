@@ -21,7 +21,13 @@
 			  }).mouseout(function(){
 			    $(this).find('.submenu').stop().slideUp(500);
 			  });
-			  $('.slider').bxSlider();
+			  //$('.slider').bxSlider();
+			  $("#logoutBtn").click(function(){
+					if(confirm("로그아웃하시겠습니까?")){
+						session.removeAttribute();
+						location.href="../../3mypage/login.jsp";
+					}
+				});
 			});
 		</script>
 		
@@ -84,20 +90,12 @@
 	// 저장된 session 값가져오기..
 	Member m = (Member)session.getAttribute("mem");
 	%>
-	<script>
-		$(document).ready(function(){
-			$("#logoutBtn").click(function(){
-				if(confirm("로그아웃하시겠습니까?")){
-					location.href="../../3mypage/login.jsp";
-				}
-			});
-		});
-	</script>
+
 		<header>
 			<nav>
 				<div id="menu1">
 					<ul>
-						<li><a href="index.jsp"><img src="image\Logo3.png" alt="" href="index.jsp" class="" width="400"></a></li>
+						<li><a href="index.jsp"><img src="image\Logo3-2_white.png" alt="" href="index.jsp" class="" width="400"></a></li>
 						<li></li>
 						<!-- 이부분은 로그인 인증시 로그인 회원가입으로 출력이 아닌 회원:@@@ 님 안녕하세요 로 출력 -->
 						<!-- @@@를 클릭하면 mypage로 이동할수 있게 변경합니다. -->
