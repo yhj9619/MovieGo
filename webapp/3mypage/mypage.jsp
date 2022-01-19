@@ -76,7 +76,7 @@
                 text-decoration: underline;
             }
             #my_post> table > tr > th,td{
-			    width:80px;
+			    width:90px;
 			    height:40px;
 			}
         </style>

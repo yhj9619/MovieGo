@@ -43,7 +43,7 @@
 			var status = "<%=status%>";
 			if(status=="success"){
 				alert("로그인 성공");
-				location.href="../1main/MovieGo_main1/index.html";
+				location.href="../1main/MovieGo_main1/index.jsp";
 			}
 			if(status=="fail"){
 				alert("로그인 실패\n다시 로그인 하세요!")
@@ -69,7 +69,7 @@
 			<div style="width:2500px;">
 			    <div class="wrap">
 				    <div class="login">
-			            <a href="../1main/MovieGo_main1/index.html"><h2>MovieGo</h2></a>
+			            <a href="../1main/MovieGo_main1/index.jsp"><h2>MovieGo</h2></a>
 			            <div class="login_sns">
 				            <li><a href=""><i class="fab fa-instagram"></i></a></li>
 				            <li><a href=""><i class="fab fa-facebook-f"></i></a></li>

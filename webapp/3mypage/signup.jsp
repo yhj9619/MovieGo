@@ -60,7 +60,7 @@
     </head>
     <body>
         <!-- header -->
-        <a href="../1main/MovieGo_main1/index.html"><h2 align="center">MovieGo</h2></a>
+        <a href="../1main/MovieGo_main1/index.jsp"><h2 align="center">MovieGo</h2></a>
 
 
         <!-- wrapper -->
