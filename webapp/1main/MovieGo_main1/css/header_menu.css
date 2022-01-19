@@ -5,8 +5,9 @@
 	margin: 0 auto; /* 중앙정렬  */ 
 	padding: 0; /* 기본적으로 들어가 있는 패딩 제거 */
 	list-style: none; /* list 앞에 붙어있는 기호 제거  */
-	color: #000000; /* 글자 색상 검은색  */
+	color: white; /* 글자 색상 검은색  */
 	font-size: 20px; /* 글자 크기 20 픽셀   */
+	
 }
 
 body{
@@ -31,6 +32,7 @@ main{
 .menu{
 	width:2000px;
 	height:200px;
+	background-color: black;
 }
 
 .menu>li{
@@ -107,7 +109,7 @@ main{
 
 #menu1 ul li a:hover{
 	background: black;
-	border: solid red;
+	border: solid rgb(235, 117, 46); ;
 	font-size: 20px;
 	font-weight: bold;
 	color: white;
@@ -116,8 +118,8 @@ main{
 /* 게시판 관련 */
 
 .sectionMake {
-    background-color: white;
-    padding: 0px;
+    background-color: black;
+    padding: 30px;
     color: black;
     /*float: left;*/
     /*display: flex;*/
@@ -129,11 +131,11 @@ main{
  	
 }
 .sectionMake > div {
-	background-color: white;
+	background-color: black;
 	margin:0 auto;
 	width: 480px;
 	height: 550px;
-	padding: 10px;
+	padding: 10px 80px;
 	z-index:1;
 	display: block;
 	float:left;
@@ -150,6 +152,8 @@ main{
             
 .sectionMake ul li{
 	height:50px;
+	background:rgb(235, 117, 46); 
+	
 }       
 
 .subSection>li:hover>a{
@@ -158,7 +162,9 @@ main{
 	 /* 마우스를 올리면 적용한 효과 나타남 : 글자 아래에 밑줄 생성  */
 }     
 
-
+.subSection > li{
+	padding: 10px 40px;
+}
 
 /* 사진 관련 css */
 .sectionImg {

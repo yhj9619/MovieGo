@@ -24,7 +24,7 @@
 			  //$('.slider').bxSlider();
 			  $("#logoutBtn").click(function(){
 					if(confirm("로그아웃하시겠습니까?")){
-						session.removeAttribute();
+						
 						location.href="../../3mypage/login.jsp";
 					}
 				});
@@ -47,7 +47,7 @@
 		.section .slidelist .textbox {position:absolute;z-index:1;top:50%;left:50%;transform:translate(-50%,-50%);line-height:1.6;text-align:center;}
 		.section .slidelist .textbox h3 {font-size:36px;color:#fff;;transform:translateY(15px);transition:all .5s;}
 		.section .slidelist .textbox p {font-size:16px;color:#fff;opacity:0;transform:translateY(30px);transition:all .5s;}
-		
+		.section {background-color: black;}
 		/* input에 체크되면 슬라이드 효과 */
 		.section input[id="slide01"]:checked ~ .slidewrap .slidelist > li {transform:translateX(0%);}
 		.section input[id="slide02"]:checked ~ .slidewrap .slidelist > li {transform:translateX(-100%);}
@@ -314,13 +314,13 @@
 		<section class="sectionMake">
 			<div>
 				<ul>
-			   	 <li><a href="#" style="text-align:center; font-size:1.5em; font-weight: bold;">자유게시판</a>
+			   	 <li><a href="#" style="text-align:center; font-size:1.5em; font-weight: bold; color: rgb(243, 159, 46);">자유게시판</a>
 			   	   <ul class="subSection">
-			   	     <li><a href="#">1. 미드나잇 재밌더라 얘들아</a></li>
-			   	     <li><a href="#">2. 좀비 바이러스 일어나면 어떡할거야?</a></li>
-			   	     <li><a href="#">3. 안녕하세요 오랜만입니다.</a></li>
-			   	     <li><a href="#">4. 샹치 명대사 굉장하지 않냐?</a></li>
-			   	     <li><a href="#">5. 영화 늦었다 ㅠㅠ</a></li>
+			   	     <li><a href="#">1. 미드나잇 재밌더라 얘들아 꼭 한번 봐주라</a></li>
+			   	     <li><a href="#">2. 좀비 바이러스 일어나면 어떡할거야? 난 냅다튐</a></li>
+			   	     <li><a href="#">3. 안녕하세요 오랜만입니다. 제가 그리우셨나요?</a></li>
+			   	     <li><a href="#">4. 샹치 명대사 굉장하지 않냐? ㅋㅋ 가슴이웅장해진다</a></li>
+			   	     <li><a href="#">5. 영화 늦었다 ㅠㅠ 나처럼 못본흑우없제?</a></li>
 			   	    		   	     
 			   	   </ul>
 			   	 </li>
@@ -328,7 +328,7 @@
 			</div>
 			<div>
 				<ul>
-			   	 <li><a href="#" style="text-align:center; font-size:1.5em; font-weight: bold;">리뷰게시판</a>
+			   	 <li><a href="#" style="text-align:center; font-size:1.5em; font-weight: bold;color: rgb(243, 159, 46);">리뷰게시판</a>
 			   	   <ul class="subSection">
 			   	     <li><a href="#">1. 미드나이트 후기_정신건강에 해롭습니다.</a></li>
 			   	     <li><a href="#">2. 아포칼립스 좀비 바이러스 영화 리뷰 데드 돈 다이</a></li>
@@ -342,7 +342,7 @@
 			</div>
 			<div>
 				<ul>
-			   	 <li><a href="#" style="text-align:center; font-size:1.5em; font-weight: bold;">평론게시판</a>
+			   	 <li><a href="#" style="text-align:center; font-size:1.5em; font-weight: bold;color: rgb(243, 159, 46);">평론게시판</a>
 			   	   <ul class="subSection">
 			   	     <li><a href="#">1. 미드나이트 후기_정신건강에 해롭습니다.</a></li>
 			   	     <li><a href="#">2. 아포칼립스 좀비 바이러스 영화 리뷰 데드 돈 다이</a></li>
@@ -353,19 +353,7 @@
 			   	 </li>
 			   	</ul>
 			</div>
-			<div>
-				<ul>
-			   	 <li><a href="#" style="text-align:center; font-size:1.5em; font-weight: bold;">평론게시판</a>
-			   	   <ul class="subSection">
-			   	     <li><a href="#">1. 미드나이트 후기_정신건강에 해롭습니다.</a></li>
-			   	     <li><a href="#">2. 아포칼립스 좀비 바이러스 영화 리뷰 데드 돈 다이</a></li>
-			   	     <li><a href="#">3. 경관의 피 시사회 리뷰(무대인사!!)</a></li>
-			   	     <li><a href="#">4. 샹치와 텐 링즈의 전설 영화 후기 및 영화 명대사</a></li>
-			   	     <li><a href="#">5. [시간의 끝에서 널 기다려] 새벽감성을 깨우는 영화</a></li>
-			   	   </ul>
-			   	 </li>
-			   	</ul>
-			</div>
+		
 		</section>
 		
 		
