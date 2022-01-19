@@ -83,7 +83,8 @@ public class Dao {
 			if( rs.next() ) {
 				m = new Member(rs.getString("id"), rs.getString("pass"), 
 						rs.getString("name"), rs.getString("nickname"),
-						rs.getString("grade"),rs.getInt("point"));
+						rs.getString("grade"),rs.getInt("point"),
+						rs.getString("intro"));
 			}
 			rs.close();
 			pstmt.close();
@@ -98,7 +99,7 @@ public class Dao {
 	}	
 	
 	public void insertMember(Member ins) {
-		String sql = "INSERT INTO MEMBER values(?,?,?,?,?,?)";
+		String sql = "INSERT INTO MEMBER values(?,?,?,?,?,?,?)";
 		try {
 			setConn();
 			con.setAutoCommit(false);
@@ -109,6 +110,7 @@ public class Dao {
 			pstmt.setString(4, ins.getNickname());
 			pstmt.setString(5, ins.getGrade());
 			pstmt.setInt(6, ins.getPoint());
+			pstmt.setString(7, ins.getIntro());
 			pstmt.executeUpdate();
 			con.commit();
 			pstmt.close();
@@ -271,7 +273,7 @@ public class Dao {
       // TODO Auto-generated method stub
 
       Dao d1 = new Dao();
-      d1.insertMember(new Member("higirl","6666","김민지","밍지","일반 사용자",0));
+      d1.insertMember(new Member("higirl","6666","김민지","밍지","일반 사용자",0,"ㅎㅇㅎㅇ"));
 
    }
 

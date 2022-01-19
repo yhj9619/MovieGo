@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <link rel = "stylesheet" type = "text/css" href = "../0_css/common.css">
+        <script type="text/javascript" src="../0jquery/jquery-3.6.0.js"></script>
         <meta charset="UTF-8">
         <title>MovieGo | 정보공개 여부</title>
         <style>

@@ -69,7 +69,7 @@
 			<div style="width:2500px;">
 			    <div class="wrap">
 				    <div class="login">
-			            <h2>MovieGo</h2>
+			            <a href="../1main/MovieGo_main1/index.html"><h2>MovieGo</h2></a>
 			            <div class="login_sns">
 				            <li><a href=""><i class="fab fa-instagram"></i></a></li>
 				            <li><a href=""><i class="fab fa-facebook-f"></i></a></li>

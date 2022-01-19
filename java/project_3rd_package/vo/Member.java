@@ -16,11 +16,12 @@ public class Member {
 	private String nickname;
 	private String grade;
 	private int point;
+	private String intro;
 	public Member() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Member(String id, String pass, String name, String nickname, String grade, int point) {
+	public Member(String id, String pass, String name, String nickname, String grade, int point, String intro) {
 		super();
 		this.id = id;
 		this.pass = pass;
@@ -28,6 +29,7 @@ public class Member {
 		this.nickname = nickname;
 		this.grade = grade;
 		this.point = point;
+		this.intro = intro;
 	}
 	public String getId() {
 		return id;
@@ -64,5 +66,11 @@ public class Member {
 	}
 	public void setPoint(int point) {
 		this.point = point;
+	}
+	public String getIntro() {
+		return intro;
+	}
+	public void setIntro(String intro) {
+		this.intro = intro;
 	}
 }

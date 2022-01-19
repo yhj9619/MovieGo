@@ -81,7 +81,7 @@
             }
 
         </style>
-        <script type="text/javascript" src="../0_jquery/jquery-3.6.0.js/"></script>
+        <script type="text/javascript" src="../0jquery/jquery-3.6.0.js"></script>
         <script type="text/javascript">
             $(document).ready(function(){
                 $("span").html("("+$(this).val().length+" / 40)");

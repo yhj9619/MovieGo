@@ -60,7 +60,7 @@
     </head>
     <body>
         <!-- header -->
-        <h2 align="center">MovieGo</h2>
+        <a href="../1main/MovieGo_main1/index.html"><h2 align="center">MovieGo</h2></a>
 
 
         <!-- wrapper -->
@@ -114,7 +114,7 @@
 	                
 	                <!-- NICKNAME -->
 	                <div>
-	                    <h3 class="join_title"><label for="name">닉네임</label></h3>
+	                    <h3 class="join_title"><label for="nickname">닉네임</label></h3>
 	                    <span class="box int_name">
 	                        <input type="text" name="nickname" id="nickname" class="int" maxlength="20">
 	                    </span>
@@ -123,9 +123,9 @@
 	
 	                <!-- GRADE -->
 	                <div>
-	                    <h3 class="join_title"><label for="gender">등급</label></h3>
+	                    <h3 class="join_title"><label for="grade">등급</label></h3>
 	                    <span class="box gender_code">
-	                        <select name="grade" id="gender" class="sel">
+	                        <select name="grade" id="grade" class="sel">
 	                            <option>일반사용자</option>
 	                            <option>유료사용자</option>
 	                            <option>관리자</option>
@@ -134,14 +134,23 @@
 	                    <span class="error_next_box">필수 정보입니다.</span>
 	                </div>
 	                
-	                <!-- point -->
+	                <!-- POINT -->
 	                <div>
-	                    <h3 class="join_title"><label for="name">포인트</label></h3>
+	                    <h3 class="join_title"><label for="point">포인트</label></h3>
 	                    <span class="box int_name">
-	                        <input type="text" name="point" id="name" class="int" maxlength="20">
+	                        <input type="text" name="point" id="point" class="int" maxlength="20">
 	                    </span>
 	                    <span class="error_next_box"></span>
-	                </div>	                
+	                </div>	      
+	                
+	                <!-- INTRODUCE -->
+	                <div>
+	                    <h3 class="join_title"><label for="intro">자기소개</label></h3>
+	                    <span class="box int_name">
+	                        <input type="text" name="intro" id="intro" class="int" maxlength="40">
+	                    </span>
+	                    <span class="error_next_box"></span>
+	                </div>	                          
 	                
 	                <!-- JOIN BTN-->
 	                <div class="btn_area">
@@ -160,8 +169,9 @@
 	String nickname= request.getParameter("nickname"); 
 	String grade= request.getParameter("grade"); 
 	String pointS= request.getParameter("point");
+	String intro= request.getParameter("intro");
 	if(id!=null){
-		Member ins = new Member(id, pass, name, nickname, grade, Integer.parseInt(pointS) );
+		Member ins = new Member(id, pass, name, nickname, grade, Integer.parseInt(pointS), intro );
 		Dao dao = new Dao();
 		dao.insertMember(ins);
 %>
