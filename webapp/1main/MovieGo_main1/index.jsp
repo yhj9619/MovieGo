@@ -97,7 +97,7 @@
 			<nav>
 				<div id="menu1">
 					<ul>
-						<li><a href="index.html"><img src="image\Logo3.png" alt="" href="index.html" class="" width="400"></a></li>
+						<li><a href="index.jsp"><img src="image\Logo3.png" alt="" href="index.jsp" class="" width="400"></a></li>
 						<li></li>
 						<!-- 이부분은 로그인 인증시 로그인 회원가입으로 출력이 아닌 회원:@@@ 님 안녕하세요 로 출력 -->
 						<!-- @@@를 클릭하면 mypage로 이동할수 있게 변경합니다. -->
