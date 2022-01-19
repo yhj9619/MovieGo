@@ -20,9 +20,10 @@ request.setCharacterEncoding("utf-8");
 <body>
    <%
    Dao d1 = new Dao();
-   ArrayList<CriticBoard> bList = d1.boardList();
-   ArrayList<Userid> uList = d1.userList();
-   // ArrayList<CriticBoard> hbList = d1.hotBoardList();
+   ArrayList<CriticBoard> bList = d1.boardList();;
+   String str = request.getParameter("searchValue");
+	if (str == null)
+		str = "";
    %>
 
    <div class="wrapper">
@@ -112,7 +113,7 @@ request.setCharacterEncoding("utf-8");
                   <option value="제목">제목</option>
                   <option value="제목 + 내용">제목 + 내용</option>
                   <option value="닉네임">닉네임</option>
-               </select> <input type="text" name="searchValue" value=""> <input
+               </select> <input type="text" name="searchValue" value="<%=str%>"> <input
                   type="submit" value="검색">
             </form>
          </div>
