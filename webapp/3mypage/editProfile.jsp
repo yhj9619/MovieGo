@@ -67,7 +67,7 @@
                 color:white;
             }
             
-            input[type=text]{
+            input[type=text], input[type=password]{
                 height: auto;
                 line-height: normal;
                 padding: 10px;
@@ -75,7 +75,7 @@
                 width: 200px;
             }
             
-            input[type=text],textarea:focus{
+            input[type=text],input[type=password],textarea:focus{
                 outline: none;
             }
             textarea{
@@ -89,7 +89,7 @@
         <script type="text/javascript">
             $(document).ready(function(){
                 $("span").html("("+$(this).val().length+" / 40)");
-                $("textarea").on('keyup',function(){
+                $("[name=intro]").on('keyup',function(){
                     $("span").html("("+$(this).val().length+" / 40)");
 
                     if($(this).val().length > 40 ) {
@@ -105,38 +105,79 @@
     	<%
 		// 저장된 session 값가져오기..
 		Member m = (Member)session.getAttribute("mem");
+
+    	String id= request.getParameter("id"); 
+    	String pass= request.getParameter("pass"); 
+    	String name= request.getParameter("name"); 
+    	String nickname= request.getParameter("nickname"); 
+    	String grade= request.getParameter("grade"); 
+    	String pointS= request.getParameter("point");
+    	String intro= request.getParameter("intro");
+    	if(id!=null){
+    		Member upt = new Member(id, pass, name, nickname, grade, Integer.parseInt(pointS), intro );
+    		Dao dao = new Dao();
+    		dao.updateMember(upt);
+    		session.setAttribute("mem", dao.getMember(id));
+    	}
 		%>
-        <div class="tab">
-            <table><tr><th>프로필<br>이미지</th><td style="text-align: center;"><img src="media/profile.png" height="140"width="140" alt="프로필사진"/></td></tr>
-                <tr>
-                    <th>닉네임</th>
-                    <td><input type="text" value="<%=m.getNickname() %>"/><button>중복확인</button></td>
-                </tr>
-                <tr>
-                    <th>전화번호</th>
-                    <td><input type="text" value="010-0000-0000"/></td>
-                </tr>
-                <tr>
-                    <th>이메일</th>
-                    <td><input type="text" value="himan@sist.com"/></td>
-                </tr>
-                <tr>
-                    <th>주소</th>
-                    <td><input type="text" value="서울특별시 영등포구 영등로 123"/></td>
-                </tr>
-                <tr>
-                    <th>선호 장르</th>
-                    <td><input type="text" value="#액션 #로맨스"/></td>
-                </tr>
-                <tr>
-                    <th>한 줄 소개<br><span></span></th>
-                    <td><textarea><%=m.getIntro() %></textarea></td>
-                </tr>
-            </table>
-            <div class="btn">
-                <input type="submit" value="저장">
-                <input type="button" value="닫기" onclick="self.close();" />
-            </div>
-        </div>
+		<script type="text/javascript">
+			$(document).ready(function(){
+				$("#uptBtn").click(function(){
+					if($("[name=nickname]").val()==""){
+						alert("이름 입력이 필요합니다.!");
+						$("[name=nickname]").focus();
+						return;
+					}
+					if($("[name=pass]").val()==""){
+						alert("패스워드 입력이 필요합니다.!");
+						$("[name=pass]").focus();
+						return;
+					}			
+					if($("[name=passCfm]").val()==""){
+						alert("패스워드  확인 입력이 필요합니다.!");
+						$("[name=passCfm]").focus();
+						return;
+					}			
+					if($("[name=pass]").val() != $("[name=passCfm]").val()){
+						alert("패스워드와 패스워드 확인이 동일하지 않습니다.")
+						return;
+					}
+					if(confirm("수정하시겠습니까?")){
+						$("form").submit();
+					}
+				});
+			});
+	    
+	    </script>
+		<form>
+	        <div class="tab">
+	        	<input type="hidden" name="id" value="${mem.id}"/>
+	        	<input type="hidden" name="name" value="${mem.name}"/>
+	        	<input type="hidden" name="grade" value="${mem.grade}"/>
+	        	<input type="hidden" name="point" value="${mem.point}"/>
+	            <table><tr><th>프로필<br>이미지</th><td style="text-align: center;"><img src="media/profile.png" height="140"width="140" alt="프로필사진"/></td></tr>
+	                <tr>
+	                    <th>닉네임</th>
+	                    <td><input type="text" name="nickname" value="${mem.nickname}"/><button>중복확인</button></td>
+	                </tr>
+	                <tr>
+	                    <th>비밀번호</th>
+	                    <td><input type="password" name="pass" value="${mem.pass}"/></td>
+	                </tr>
+	                <tr>
+	                    <th>2차 비밀번호</th>
+	                    <td><input type="password" name="passCfm" value=""/></td>
+	                </tr>
+	                <tr>
+	                    <th>한 줄 소개<br><span></span></th>
+	                    <td><input type="text" name="intro" value="${mem.intro}"/> </td>
+	                </tr>
+	            </table>
+	            <div class="btn">
+	                <input type="button" id="uptBtn" value="저장">
+	                <input type="button" value="닫기" onclick="self.close();" />
+	            </div>
+	        </div>
+        </form>
     </body>
 </html>

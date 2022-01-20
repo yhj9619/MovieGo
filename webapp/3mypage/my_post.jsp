@@ -26,6 +26,7 @@
   			}
   			.bottom_div > span{
   				margin: 5px;
+  				color: white;
   			}
   			.bottom_div > span:hover{
   				margin: 5px;
@@ -134,7 +135,7 @@
                 	</tbody>
                 </table>
                 <div class="bottom_div">
-	                <input type="checkbox" name="post" onclick="selectAll(this)"/>전체선택
+	                <input type="checkbox" name="post" onclick="selectAll(this)"/><span>전체선택</span>
 	                <span><<</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>>></span>
 	            	<input type="button" value="선택 삭제" />
                 </div>

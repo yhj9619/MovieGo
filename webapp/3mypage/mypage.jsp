@@ -78,7 +78,7 @@
         </style>
         <script>
             function editProfileBtn(){
-                window.open("editProfile.jsp","개인정보 수정","width=500, height=500, left=700, top=100")
+                window.open("editProfile.jsp","개인정보 수정","width=500, height=400, left=700, top=100")
             }
             function editDisclosureBtn(){
                 window.open("editDisclosure.jsp","정보공개 설정","width=500, height=330, left=700, top=100");

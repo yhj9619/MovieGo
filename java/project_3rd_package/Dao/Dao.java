@@ -134,6 +134,80 @@ public class Dao {
 
 	}	
 	
+	public Member getMember(String id) {
+		// 리턴할 객체 선언.
+		
+		Member m = null;
+		// 1. 연결공통메서드 호출
+		String sql = "SELECT * \r\n"
+				+ "FROM Member \r\n"
+				+ "WHERE id = ?";
+		try {
+			setConn();
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, id);
+			
+			rs = pstmt.executeQuery();
+			if( rs.next() ) {
+				m = new Member(rs.getString("id"), rs.getString("pass"), 
+						rs.getString("name"), rs.getString("nickname"),
+						rs.getString("grade"),rs.getInt("point"),
+						rs.getString("intro"));
+			}
+			rs.close();
+			pstmt.close();
+			con.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			// 6. 예외 처리..
+			System.out.println(e.getMessage());
+			closeRsc();
+		}
+		System.out.println("상세조회(mypage)");
+		return m;
+	}	
+	
+	public void updateMember(Member upt) {
+		String sql = "UPDATE MEMBER\r\n"
+				+ "	SET pass = ?,\r\n"
+				+ "		name = ?,\r\n"
+				+ "		nickname = ?,\r\n"
+				+ "		grade = ?,\r\n"
+				+ "		point = ?,\r\n"
+				+ "		intro = ?\r\n"
+				+ "	WHERE id = ?";
+		try {
+			setConn();
+			con.setAutoCommit(false);
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, upt.getPass());
+			pstmt.setString(2, upt.getName());
+			pstmt.setString(3, upt.getNickname());
+			pstmt.setString(4, upt.getGrade());
+			pstmt.setInt(5, upt.getPoint());
+			pstmt.setString(6, upt.getIntro());
+			pstmt.setString(7, upt.getId());
+
+			pstmt.executeUpdate();
+			con.commit();
+			pstmt.close();
+			con.close();
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			try {
+				con.rollback();
+			} catch (SQLException e1) {
+				// TODO Auto-generated catch block
+				e1.printStackTrace();
+			}
+			// 6. 예외 처리..
+			System.out.println(e.getMessage());
+			closeRsc();
+		}finally {
+			System.out.println("수정 처리 완료!!");
+		}
+
+	}		
 
    public ArrayList<CriticBoard> boardList() {
       ArrayList<CriticBoard> boardList = new ArrayList<CriticBoard>();
@@ -266,7 +340,6 @@ public class Dao {
 		            con = null;
 		         }
 			}
-			
 		}
 		
 		
@@ -278,7 +351,9 @@ public class Dao {
       Dao d1 = new Dao();
       //d1.insertMember(new Member("higirl","6666","김민지","밍지","일반 사용자",0,"ㅎㅇㅎㅇ"));
       //INSERT INTO criticBoard values(1,'스파이더맨: 노 웨이 홈 (쿠키, 베놈, 삼스파)',sysdate,50,3,'리뷰','필름닷');
-      d1.insertboard(new CriticBoard(8,"윤석이의 기묘한 모험", null, 238,49,"리뷰","너무힘들어"));
+      //d1.insertboard(new CriticBoard(8,"윤석이의 기묘한 모험", null, 238,49,"리뷰","너무힘들어"));
+      //d1.updateMember(new Member("higirl","6666","김민지","밍지3","일반 사용자",0,"ㅎㅇㅎㅇ"));
+      d1.getMember("himan");
       
    }
 
