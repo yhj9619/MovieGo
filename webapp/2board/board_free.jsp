@@ -11,7 +11,7 @@ request.setCharacterEncoding("utf-8");
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MovieGo | 리뷰 게시판</title>
+<title>MovieGo | 자유 게시판</title>
 <link rel="stylesheet" href="board_common.css">
 </head>
 
@@ -27,7 +27,7 @@ request.setCharacterEncoding("utf-8");
 
 	<div class="wrapper">
 		<section>
-			<h2>리뷰 게시판</h2>
+			<h2>자유 게시판</h2>
 			<!-- 인기 게시글 영역 -->
 			<div class="hotBoard">
 				<h3>인기 게시글</h3>
