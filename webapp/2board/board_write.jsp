@@ -14,10 +14,31 @@
 </head>
 <body>
 
-<%  Dao d1 = new Dao(); 
-//ArrayList<CriticBoard> bList = d1.boardList();
-//ArrayList<Userid> uList = d1.userList();
-
+<%  
+	Member m = (Member)session.getAttribute("mem");
+	request.setCharacterEncoding("utf-8");
+	Dao d1 = new Dao();
+	String title = request.getParameter("title");
+	String content = request.getParameter("content");
+	
+	if(title!=null){
+		CriticBoard c1 = new CriticBoard();
+		c1.setBoardNum(11);
+		c1.setBoardTitle(title);
+		
+		c1.setBoardHits(0);
+		c1.setBoardLike(0);
+		c1.setBoardContent(content);
+		c1.setBoardUser(m.getNickname());
+		
+		d1.insertboard(c1);
+		response.sendRedirect("board_critic.jsp");
+	}
+/*
+("+cb.getBoardNum()+",'"+cb.getBoardTitle()+"',"
++"sysdate"+","+cb.getBoardHits()+","+cb.getBoardLike()+",'"
++cb.getBoardContent()+"','"+cb.getBoardUser()+"')";
+*/
 %>
 
 <div class="wrapper">
@@ -28,7 +49,7 @@
 			</section>
 				<div id="write_area">
 					
-					<form action="" method="post">
+					<form method="post">
 						<div id="in_title">
 							<textarea name="title" id="utitle" rows="1" cols="134" placeholder="제목" length="300" required></textarea>
 						</div>
