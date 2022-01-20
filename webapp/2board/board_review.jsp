@@ -24,7 +24,6 @@ request.setCharacterEncoding("utf-8");
 	if (str == null)
 		str = "";
 	%>
-
 	<div class="wrapper">
 		<section>
 			<h2>리뷰 게시판</h2>
@@ -65,7 +64,6 @@ request.setCharacterEncoding("utf-8");
 						}
 						}
 						%>
-
 					</tbody>
 				</table>
 			</div>
@@ -130,17 +128,17 @@ request.setCharacterEncoding("utf-8");
 			<!-- 최근 본 게시글 영역 -->
 			<div>
 				<h3>최근 본 게시글</h3>
-				<a href="#">게시글 제목</a> <a href="#">게시글 제목</a> <a href="#">게시글 제목</a>
-				<a href="#">게시글 제목</a> <a href="#">게시글 제목</a>
+				<a href="#">마더 안드로이드 클레이모레츠...</a> <a href="#">스파이더맨: 노 웨이 홈 (쿠키...</a> <a href="#">이터널스 영화 후기 (약스포)</a>
+				<a href="#">2022년 1월 개봉예정영화 추천</a> <a href="#">보이스 영화 후기 및 영화관...</a>
 			</div>
 			<!-- 영화 순위 영역 -->
 			<div>
 				<h3>현재 영화 순위</h3>
-				<a href="#">1 <span>영화제목</span></a> <a href="#">2 <span>영화제목</span></a>
-				<a href="#">3 <span>영화제목</span></a> <a href="#">4 <span>영화제목</span></a>
-				<a href="#">5 <span>영화제목</span></a> <a href="#">6 <span>영화제목</span></a>
-				<a href="#">7 <span>영화제목</span></a> <a href="#">8 <span>영화제목</span></a>
-				<a href="#">9 <span>영화제목</span></a>
+				<a href="#">1 <span>해적: 도깨비 깃발</span></a> <a href="#">2 <span>스파이더맨: 노 웨이 홈</span></a>
+				<a href="#">3 <span>킹메이커</span></a> <a href="#">4 <span>씽2게더</span></a>
+				<a href="#">5 <span>특송</span></a> <a href="#">6 <span>장민호 드라마 최종회</span></a>
+				<a href="#">7 <span>웨스트 사이드 스토리</span></a> <a href="#">8 <span>경관의 피</span></a>
+				<a href="#">9 <span>어나더 라운드</span></a>
 			</div>
 		</aside>
 	</div>
