@@ -1,0 +1,157 @@
+/* 컨텐츠 영역 */
+.wrapper {
+	width: 1140px;
+	/* margin 0 auto : 컨텐츠 중앙정렬 설정, 컨텐츠의 가로 너비가 반드시 필요함 */
+	margin: 0 auto;
+	display: flex;
+  }
+  
+  .wrapper>section {
+	width: 870px;
+  }
+  top {
+	  width: 400px;
+	  height: 30px;
+	  margin-left: 1px;
+	  /* border: 1px solid #666; */
+	}
+	top h2 {
+	  font-size: 25px;
+	  font-weight: 500;
+	  margin: 0;
+	  padding: 5px;
+	  /* width: 951px;  */
+	  background: linear-gradient(60deg, #000, #434343);
+	  color: white;
+	}
+	top h3 {
+	  font-size: 15px;
+	}
+	top .area {
+	  border: 1px solid #666;
+	  padding: 10px;
+	  height: 500px;
+	}
+  button {
+	  width: 80px;
+	  height: 40px;
+	  margin-right: 500px;
+	  border: 1px solid #666;
+	}
+  
+	
+  /* aside 영역 */
+  aside {
+	width: 250px;
+	height: 680px;
+	margin-left: 20px;
+	border: 1px solid #999;
+	border-radius: 5px;
+  }
+  
+  aside h3 {
+	font-size: 17px;
+	font-weight: 500;
+	margin: 0;
+	padding: 5px;
+	background: linear-gradient(60deg, #000, #434343);
+	color: white;
+  }
+  
+  aside a {
+	font-size: 14px;
+	display: block;
+	text-decoration: none;
+	color: black;
+	margin: 10px 10px;
+  }
+  
+  aside a:hover {
+	font-weight: bold;
+	color: #f0872b;
+  }
+  
+  aside span {
+	margin-left: 30px;
+  }
+  
+	body{
+		line-height:2em;		
+		font-family:"맑은 고딕";
+	}
+	ul, li{ 
+	    list-style:none;
+	    text-align:center;
+	    padding:0;
+	    margin:0;
+    }
+
+    #mainWrapper{
+    	width: 800px;
+		margin: 0 auto; /*가운데 정렬*/
+	}
+
+	#mainWrapper > ul > li:first-child {
+		text-align: center;
+		font-size:15pt;
+		height:40px;
+		vertical-align:middle;
+		line-height:30px;
+	}
+
+	#ulTable {margin-top:10px;}
+	
+
+	#ulTable > li:first-child > ul > li {
+		background-color:#e09213;
+		font-weight:bold;
+		text-align:center;
+	}
+
+    #ulTable > li > ul {
+    	clear:both;
+    	padding:0px auto;
+    	position:relative;
+    	min-width:40px;
+    }
+    #ulTable > li > ul > li { 
+    	float:left;
+    	font-size:10pt;
+    	border-bottom:1px solid silver;
+    	vertical-align:baseline;
+    }    
+
+    #ulTable > li > ul > li:first-child           	{width:10%;} /*No 열 크기*/
+    #ulTable > li > ul > li:first-child +li       	{width:45%;} 
+    #ulTable > li > ul > li:first-child +li+li    	{width:20%;} 
+    #ulTable > li > ul > li:first-child +li+li+li 	{width:15%;} 
+    #ulTable > li > ul > li:first-child +li+li+li+li{width:10%;} 
+
+    #divPaging {
+  		clear:both; 
+    	margin:0 auto; 
+    	width:220px; 
+    	height:50px;
+    }
+
+    #divPaging > div {
+	    float:left;
+	    width: 30px;
+	    margin:0 auto;
+	    text-align:center;
+     }
+
+    #liSearchOption {clear:both;}
+    #liSearchOption > div {
+	    margin:0 auto; 
+	    margin-top: 30px; 
+	    width:auto; 
+	    height:100px; 
+	   
+    }
+
+    .left {
+    	text-align : left;
+    }
+
+

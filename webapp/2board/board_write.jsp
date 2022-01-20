@@ -28,7 +28,7 @@
 			</section>
 				<div id="write_area">
 					
-					<form enctype="multipart/form-data" action="" method="post">
+					<form action="" method="post">
 						<div id="in_title">
 							<textarea name="title" id="utitle" rows="1" cols="134" placeholder="제목" length="300" required></textarea>
 						</div>
@@ -40,7 +40,7 @@
 	 
 						  <input type="file" name="SelectFile" />
 
-						  <input button1 type="submit" name = "button">
+						  <input type="submit" name="button">
 					</form>
 				</div>
 			</div>

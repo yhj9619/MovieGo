@@ -9,7 +9,7 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
-import jspexp.a05_th_member.vo.Member;
+
 import project_3rd_package.vo.*;
 
 public class Dao {
@@ -134,7 +134,7 @@ public class Dao {
 
 	}	
 	
-/* 
+
    public ArrayList<CriticBoard> boardList() {
       ArrayList<CriticBoard> boardList = new ArrayList<CriticBoard>();
       try {
@@ -232,9 +232,12 @@ public class Dao {
    // 등록
    public void insertboard(CriticBoard cb) {
 	   //INSERT INTO criticBoard values(1,'스파이더맨: 노 웨이 홈 (쿠키, 베놈, 삼스파)',sysdate,50,3,'리뷰','필름닷');
-		String sql = "INSERT INTO criticBoard VALUES ("+cb.getBoardNum()+"','"+cb.getBoardTitle()+"','"
-				+cb.getBoardRegiDate()+"','"+cb.getBoardHits()+"','"+cb.getBoardLike()+","
-		+cb.getBoardContent()+","+cb.getBoardUser()+")";
+		String sql = "INSERT INTO criticBoard VALUES ("+cb.getBoardNum()+",'"+cb.getBoardTitle()+"',"
+														+"sysdate"+","+cb.getBoardHits()+","+cb.getBoardLike()+",'"
+														+cb.getBoardContent()+"','"+cb.getBoardUser()+"')";
+		
+	
+		System.out.println("데이터 입력 :"+sql);
 		try {
 			setConn();
 			// 자동커밋 방지
@@ -268,13 +271,15 @@ public class Dao {
 		
 		
 	}
-*/
+
    public static void main(String[] args) {
       // TODO Auto-generated method stub
 
       Dao d1 = new Dao();
-      d1.insertMember(new Member("higirl","6666","김민지","밍지","일반사용자",0,"ㅎㅇㅎㅇ"));
-
+      //d1.insertMember(new Member("higirl","6666","김민지","밍지","일반 사용자",0,"ㅎㅇㅎㅇ"));
+      //INSERT INTO criticBoard values(1,'스파이더맨: 노 웨이 홈 (쿠키, 베놈, 삼스파)',sysdate,50,3,'리뷰','필름닷');
+      d1.insertboard(new CriticBoard(8,"윤석이의 기묘한 모험", null, 238,49,"리뷰","너무힘들어"));
+      
    }
 
 }

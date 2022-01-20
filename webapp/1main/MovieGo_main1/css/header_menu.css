@@ -5,12 +5,14 @@
 	margin: 0 auto; /* 중앙정렬  */ 
 	padding: 0; /* 기본적으로 들어가 있는 패딩 제거 */
 	list-style: none; /* list 앞에 붙어있는 기호 제거  */
-	color: #000000; /* 글자 색상 검은색  */
+	color: white; /* 글자 색상 검은색  */
 	font-size: 20px; /* 글자 크기 20 픽셀   */
+	
 }
 
 body{
 	width: 2000px; /* 바디 태그 너비 1400픽셀 지정 */
+	background-color: black;
 }
 
 a{
@@ -31,6 +33,7 @@ main{
 .menu{
 	width:2000px;
 	height:200px;
+	background-color: black;
 }
 
 .menu>li{
@@ -81,79 +84,100 @@ main{
 #menu1{
 	width:2000px;
 	height:130px;
+	color: white;
 }
 
 #menu1 ul{
 	height:135px;
+	color: white;
 }
 
 #menu1 ul li{
 	float: left;
 	width: 25%;
-	height: 50%;
+	height: 100%;
 	line-height:50px;
 	text-align: center;
-	background: white;
+	background: black;
 	font-weight: bold;
+	color: white;
 }
 
 #menu1 ul li a{
 	display: block;	
+	color: white;
 }
 
 #menu1 ul li a:hover{
-	background: white;
-	border: solid red;
+	background: black;
+	border: solid rgb(235, 117, 46); ;
 	font-size: 20px;
 	font-weight: bold;
+	color: white;
 }
 
 /* 게시판 관련 */
 
 .sectionMake {
-    background-color: white;
-    padding: 0px;
+    background-color: black;
+    padding: 30px;
     color: black;
     /*float: left;*/
     /*display: flex;*/
     flex-direction: row-reverse;
-    width: 2000px;
+    width: 1500px;
     height: 600px;
-    
-
- 	
+		margin-left: 340px;
 }
+
 .sectionMake > div {
-	background-color: white;
+	background-color: black;
 	margin:0 auto;
-	width: 480px;
+	width: 400px;
 	height: 550px;
-	padding: 10px;
+	padding: 0 10px;
 	z-index:1;
 	display: block;
 	float:left;
 }
-
-
- 
-.sectionMake >li >a{
-	background: white;
-	
-	
-	
-}
             
 .sectionMake ul li{
-	height:50px;
-}       
+	height:45px;
+} 
+
+.sectionMakeTitle {
+	border-bottom: 2px solid rgb(235, 117, 46);
+	font-size:20px; 
+	padding-left: 10px;
+	padding-top: 10px;
+	padding-bottom: 15px;
+	font-weight: bold; 
+	color: rgb(243, 159, 46);
+}
+
+.sectionMake span {
+	margin-left: 230px;
+	font-size: 14px;
+	color: rgb(243, 159, 46);
+	font-weight: normal;
+}
+
+.subSection {
+	margin-top: 15px;
+}
+
+.subSection a {
+	color: #d3d3d3;
+	font-size: 15px;
+	border-bottom: 1px solid #444;
+	padding-bottom: 12px;
+}
 
 .subSection>li:hover>a{
 	text-decoration: underline;
 	font-weight: bold;
 	 /* 마우스를 올리면 적용한 효과 나타남 : 글자 아래에 밑줄 생성  */
-}     
-
-
+}    
 
 /* 사진 관련 css */
 .sectionImg {
@@ -178,12 +202,3 @@ main{
 .slider >div>table{
 	margin: auto;
 }
-
-
-
-
-
-
-
-
-
